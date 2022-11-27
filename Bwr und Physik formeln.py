@@ -419,7 +419,7 @@ def alle_formeln():
                             else:
                                 print("Das Gewicht muss über 0 sein")
                         elif Einhheit_von == "g":
-                            if Einheit_in == "kg":#
+                            if Einheit_in == "kg":
                              Gewicht = input("Wie viel g? ")
                              Gewicht = float(Gewicht)
                              if Gewicht > 0:
@@ -456,7 +456,14 @@ def alle_formeln():
                         if volumen > 0:
                             if masse > 0:
                                 ergebnis = masse / volumen
-                                print(f"Es sind {ergebnis} m ")
-                                
-                        
+                                print(f"Die Dichte ist {ergebnis} p")
+                                quitt = input("Willst du aufhören Dichte zuberechnen? (y um zu bestätigen) ")
+                                if quitt == "y":
+                                    for clear in range(100):
+                                        print("")
+                                    break
+                            else:
+                                print("Die Massee muss über 0 sein")
+                        else:
+                            print("Das Volumen muss über 0 sein")
 alle_formeln()                  
