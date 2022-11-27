@@ -444,8 +444,26 @@ def alle_formeln():
                             wait = input("")
                             time.sleep(0.15)
                 elif formel == "Dichte":
+                    for clear in range(100):
+                        print("")
+                    print("Alle einheiten sleber umrechnen!")
                     while True:
-                        wait = input("")
-                        break
-                        
+                        volumen = input("Was ist das volumen? (v) ")
+                        masse = input("Was ist die Masse? (m) ")
+                        time.sleep(0.15)
+                        volumen = float(volumen)
+                        masse = float(masse)
+                        if volumen > 0:
+                            if masse > 0:
+                                ergebnis = masse / volumen
+                                print(f"Die Dichte ist {ergebnis} p ")          
+                                quitt = input("Willst du Aufhören volumen zu berechnen? (y um zu bestätigen) ")
+                                if quitt == "y":
+                                    for clear in range(100):
+                                        print("")
+                                    break               
+                            else:
+                                print("Die masse muss über 0 sein")
+                        else:
+                          print("Das volumen muss über 0 sein")
 alle_formeln()                  
