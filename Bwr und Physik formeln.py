@@ -419,7 +419,7 @@ def alle_formeln():
                             else:
                                 print("Das Gewicht muss über 0 sein")
                         elif Einhheit_von == "g":
-                            if Einheit_in == "kg":
+                            if Einheit_in == "kg":#
                              Gewicht = input("Wie viel g? ")
                              Gewicht = float(Gewicht)
                              if Gewicht > 0:
@@ -446,24 +446,17 @@ def alle_formeln():
                 elif formel == "Dichte":
                     for clear in range(100):
                         print("")
-                    print("Alle einheiten sleber umrechnen!")
+                    print("Alle Einheiten selber umrechnen")
                     while True:
-                        volumen = input("Was ist das volumen? (v) ")
-                        masse = input("Was ist die Masse? (m) ")
+                        volumen = input("Was ist das Volumen? (v) ")
                         time.sleep(0.15)
+                        masse = input("was ist die masse? (m) ")
                         volumen = float(volumen)
                         masse = float(masse)
                         if volumen > 0:
                             if masse > 0:
                                 ergebnis = masse / volumen
-                                print(f"Die Dichte ist {ergebnis} p ")          
-                                quitt = input("Willst du Aufhören volumen zu berechnen? (y um zu bestätigen) ")
-                                if quitt == "y":
-                                    for clear in range(100):
-                                        print("")
-                                    break               
-                            else:
-                                print("Die masse muss über 0 sein")
-                        else:
-                          print("Das volumen muss über 0 sein")
+                                print(f"Es sind {ergebnis} m ")
+                                
+                        
 alle_formeln()                  
